@@ -23,3 +23,7 @@ pip3 install -r requirements.txt
 ### 3. Run the application using
 
 uvicorn app.main:app --reload
+
+### 4. Use application in browser
+
+visit http://localhost:8000
