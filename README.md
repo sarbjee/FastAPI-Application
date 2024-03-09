@@ -7,8 +7,8 @@ This is a FastAPI application that demonstrates basic usage.
 ### 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/your-fastapi-app.git
-cd your-fastapi-app
+git clone https://github.com/OAkinbode/ET-AIModel.git
+cd ET-AIModel
 
 ```
 
