@@ -20,9 +20,13 @@ or
 
 pip3 install -r requirements.txt
 
-### 3. Run the application using
+### 3. Run the application using for mac
 
 uvicorn app.main:app --reload
+
+### 3. Run the application using for windows
+
+python.exe -m uvicorn.main app.main:app --reload
 
 ### 4. Use application in browser
 
