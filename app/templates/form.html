@@ -6,8 +6,22 @@
   <body>
     <h1>Prompt a Model</h1>
     <form method="post">
-      <label for="prompt">Enter a prompt:</label>
-      <input type="text" id="prompt" name="prompt" required />
+      <div>
+        <label for="prompt">Enter a prompt:</label>
+        <input type="text" id="prompt" name="prompt" required />
+      </div>
+      <div>
+        <label for="interest">Select your interest area:</label>
+        <select id="interest" name="interest">
+          <option value="toys">Toys</option>
+          <option value="games">Games</option>
+          <option value="educational">Educational</option>
+        </select>
+      </div>
+      <div>
+        <label for="budget">Your budget ($):</label>
+        <input type="number" id="budget" name="budget" step="0.01" min="0" />
+      </div>
       <button type="submit">Submit</button>
     </form>
     {% if response %}
