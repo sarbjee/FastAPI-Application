@@ -2,31 +2,50 @@
 <html>
   <head>
     <title>FastAPI Form Example</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
   <body>
-    <h1>Prompt a Model</h1>
-    <form method="post">
-      <div>
-        <label for="prompt">Enter a prompt:</label>
-        <input type="text" id="prompt" name="prompt" required />
+    <div class="container">
+      <h1>Prompt a Model</h1>
+      <form method="post">
+        <div class="form-group">
+          <label for="prompt">Enter a prompt:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="prompt"
+            name="prompt"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="interest">Select your interest area:</label>
+          <select class="form-control" id="interest" name="interest">
+            <option value="Baby">Baby</option>
+            <option value="Core Toy">Core Toy</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Learning">Learning</option>
+            <option value="Seasonal">Seasonal</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      <div class="response">
+        {% if response %}
+        <h2>Response:</h2>
+        <p>{{ response }}</p>
+        {% endif %}
       </div>
-      <div>
-        <label for="interest">Select your interest area:</label>
-        <select id="interest" name="interest">
-          <option value="toys">Toys</option>
-          <option value="games">Games</option>
-          <option value="educational">Educational</option>
-        </select>
+      <!-- Placeholder for sales graph image -->
+      <div class="sales-graph">
+        <h2>Sales Graph:</h2>
+        <img src="/sales-graph/" alt="Sales Graph" />
       </div>
-      <div>
-        <label for="budget">Your budget ($):</label>
-        <input type="number" id="budget" name="budget" step="0.01" min="0" />
-      </div>
-      <button type="submit">Submit</button>
-    </form>
-    {% if response %}
-    <h2>Response:</h2>
-    <p>{{ response }}</p>
-    {% endif %}
+    </div>
   </body>
 </html>
