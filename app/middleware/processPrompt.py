@@ -12,10 +12,13 @@ def promptResponse(prompt, interest, budget):
     """
     # Mock data for demonstration purposes
     PRODUCT_CATALOG = [
-        {"name": "Action Figure", "category": "Toys", "description": "An action figure for ages 5 and up.", "price": 20.00},
-        {"name": "Board Game", "category": "Games", "description": "A fun board game for the whole family.", "price": 30.00},
-        {"name": "Puzzle", "category": "Games", "description": "A challenging 1000-piece puzzle.", "price": 15.00},
-    ]
+        {"name": "Action Figure", "category": "Toys", "description": "An action figure for ages 5 and up.", "price": 20.00, "tags": ["adventure", "superhero"]},
+        {"name": "Board Game", "category": "Games", "description": "A fun board game for the whole family.", "price": 30.00, "tags": ["strategy", "family"]},
+        {"name": "Puzzle", "category": "Games", "description": "A challenging 1000-piece puzzle.", "price": 15.00, "tags": ["puzzle", "solitaire"]},
+        # New educational toys
+        {"name": "Science Kit", "category": "Educational", "description": "Explore basic scientific principles with this engaging kit.", "price": 25.00, "tags": ["science", "learning", "education"]},
+        {"name": "Math Puzzle", "category": "Educational", "description": "Challenge your math skills with fun puzzles.", "price": 18.00, "tags": ["math", "education", "puzzle"]},
+        {"name": "Language Learning Game", "category": "Educational", "description": "Learn new languages through interactive gameplay.", "price": 22.00, "tags": ["language", "learning", "education"]},]
 
     # Filter the product catalog based on the user's interest area and budget
     filtered_catalog = [product for product in PRODUCT_CATALOG if product["category"].lower() == interest.lower() and product["price"] <= budget]
