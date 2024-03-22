@@ -1,7 +1,11 @@
 <!-- templates/form.html -->
-<html>
-  <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FastAPI Form Example</title>
+<<<<<<< HEAD
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -36,10 +40,83 @@
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
       <div class="response">
+=======
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Prompt a Model</h1>
+        <form method="post">
+            <div>
+                <label for="prompt">Enter a prompt:</label>
+                <input type="text" id="prompt" name="prompt" required>
+            </div>
+            <div>
+                <label for="interest">Select your interest area:</label>
+                <select id="interest" name="interest">
+                    <option value="">Select</option>
+                    <option value="toys">Toys</option>
+                    <option value="games">Games</option>
+                    <option value="educational">Educational</option>
+                </select>
+            </div>
+            <div>
+                <label for="budget">Your budget ($):</label>
+                <input type="number" id="budget" name="budget" step="0.01" min="0">
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+>>>>>>> ce2c4a6dbe6c290a3d8f5ccd772643d4f8c1506c
         {% if response %}
         <h2>Response:</h2>
         <p>{{ response }}</p>
         {% endif %}
+<<<<<<< HEAD
       </div>
       <!-- Placeholder for sales graph image -->
       <div class="sales-graph">
@@ -48,4 +125,8 @@
       </div>
     </div>
   </body>
+=======
+    </div>
+</body>
+>>>>>>> ce2c4a6dbe6c290a3d8f5ccd772643d4f8c1506c
 </html>
